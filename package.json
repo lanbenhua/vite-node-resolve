@@ -1,0 +1,45 @@
+{
+  "name": "vite-node-resolve",
+  "version": "1.0.0",
+  "description": "vite node module resolve",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist && tsup",
+    "dev": "tsup -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanbenhua/vite-node-resolve.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lanbenhua/vite-node-resolve/issues"
+  },
+  "homepage": "https://github.com/lanbenhua/vite-node-resolve#readme",
+  "dependencies": {
+    "esbuild-plugin-polyfill-node": "^0.3.0",
+    "rollup-plugin-node-polyfills": "^0.2.1"
+  },
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^3",
+    "lint-staged": "^13"
+  },
+  "peerDependencies": {
+    "vite": "^3"
+  },
+  "lint-staged": {
+    "*.{json,md}": [
+      "prettier --write"
+    ],
+    "**/*.ts": [
+      "eslint --fix"
+    ]
+  }
+}
