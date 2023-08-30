@@ -5,6 +5,19 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**.js",
+    "dist/**.cjs",
+    "dist/**.mjs",
+    "dist/**.d.ts"
+  ],
+  "exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		}
+	},
+  "sideEffects": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ./dist && tsup",
@@ -14,8 +27,8 @@
     "type": "git",
     "url": "git+https://github.com/lanbenhua/vite-node-resolve.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["vite", "node", "node-resolve"],
+  "author": "lanbenhua",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lanbenhua/vite-node-resolve/issues"
